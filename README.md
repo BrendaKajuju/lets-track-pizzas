@@ -1,24 +1,59 @@
-# README
+# Pizza Tracker API
+a Rails API backend for tracking pizza in restaurants. This API allows you to manage restaurants, pizzas, and the association between them. You can retrieve a list of restaurants, get details of a specific restaurant with its associated pizzas, delete a restaurant, retrieve a list of pizzas, and create associations between existing pizzas and restaurants.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+To get started, follow the instructions below.
 
-Things you may want to cover:
+### Prerequisites
+Make sure you have the following installed on your machine:
 
-* Ruby version
+Ruby (version 2.7.0 or higher)
+Ruby on Rails (version 6.0.0 or higher)
 
-* System dependencies
+### Installation
+Clone the repository:
 
-* Configuration
+```
+git clone <repository-url>
+Install the dependencies:
+bundle install
+```
 
-* Database creation
+Set up the database:
 
-* Database initialization
+```
+rails db:create
+rails db:migrate
+```
 
-* How to run the test suite
+(Optional) Seed the database with sample data and Start the Rails server:
+```
+rails db:seed
+rails server
+```
+The API will be available at http://localhost:3000.
 
-* Services (job queues, cache servers, search engines, etc.)
+### API Endpoints
+The following endpoints are available in the Pizza Tracker API:
 
-* Deployment instructions
+Restaurants
+GET /restaurants: Retrieve a list of all restaurants.
+GET /restaurants/:id: Retrieve details of a specific restaurant with its associated pizzas.
+DELETE /restaurants/:id: Delete a restaurant and its associated restaurant pizzas.
+Pizzas
+GET /pizzas: Retrieve a list of all pizzas.
+Restaurant Pizzas
+POST /restaurant_pizzas: Create an association between an existing pizza and an existing restaurant.
+Data Format
+The API returns and accepts data in JSON format. 
 
-* ...
+### Validation
+The RestaurantPizza model has a validation for the price attribute, which must be between 1 and 30.
+
+
+## Contributing
+Contributions to the Pizza Tracker API are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+### License
+The Pizza Tracker API is open source and available under the MIT License.
+
