@@ -1,5 +1,5 @@
 # Pizza Tracker API
-a Rails API backend for tracking pizza in restaurants. This API allows you to manage restaurants, pizzas, and the association between them. You can retrieve a list of restaurants, get details of a specific restaurant with its associated pizzas, delete a restaurant, retrieve a list of pizzas, and create associations between existing pizzas and restaurants.
+This is a Rails API backend for tracking pizza in restaurants. It allows you to manage restaurants, pizzas, and the association between them. You can retrieve a list of restaurants, get details of a specific restaurant with its associated pizzas, delete a restaurant, retrieve a list of pizzas, and create associations between existing pizzas and restaurants.
 
 ## Getting Started
 To get started, follow the instructions below.
@@ -26,7 +26,7 @@ rails db:create
 rails db:migrate
 ```
 
-(Optional) Seed the database with sample data and Start the Rails server:
+(Optional) Seed the database with your owb sample data and Start the Rails server:
 ```
 rails db:seed
 rails server
